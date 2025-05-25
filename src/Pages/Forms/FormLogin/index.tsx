@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Input from "../../../Components/Input";
 import Button from "../../../Components/Button";
+import styles from './styles.module.css'
 
 type User = {
   id: number;
@@ -28,14 +29,14 @@ export default function FormLogin() {
   // }, []);
 
   return (
-    <main>
-      <div>
+    <main className={styles.main}>
+      <div className={styles.leftLogin}>
         <h1>
           Faça login <br />E entre para nosso time
         </h1>
       </div>
-      <div className="right-login">
-        <div className="card-login">
+      <div className={styles.rightLogin}>
+        <div className={styles.cardLogin}>
           <h2>Login</h2>
           <Input
             label="Usuário"
