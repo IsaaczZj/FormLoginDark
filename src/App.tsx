@@ -1,9 +1,15 @@
+import { BrowserRouter, Route, Routes } from "react-router"
+import FormLogin from "./Pages/Forms/FormLogin"
+import AdminPage from "./Pages/Admin"
 
 function App() {
   return (
-    <>
-      <h1>Blog Router</h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route index path="/" element={<FormLogin/>}/>
+        <Route path="/admin" element={<AdminPage/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 

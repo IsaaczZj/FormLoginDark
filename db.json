@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "isaac",
+      "password": "123"
+    },
+    {
+      "id": 0.03890970409804706,
+      "username": "Carlos",
+      "password": "123"
+    },
+    {
+      "id": 0.03890970409804706,
+      "username": "Carlos",
+      "password": "123"
+    },
+    {
+      "id": 0.38200272260832646,
+      "username": "Carlos",
+      "password": "123"
+    },
+    {
+      "id": 0.38200272260832646,
+      "username": "Carlos",
+      "password": "123"
+    }
+  ]
+}
