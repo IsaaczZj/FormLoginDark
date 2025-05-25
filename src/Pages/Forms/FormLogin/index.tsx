@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Input from "../../../Components/Input";
+import Button from "../../../Components/Button";
 
 type User = {
   id: number;
@@ -26,8 +28,30 @@ export default function FormLogin() {
   // }, []);
 
   return (
-    <form>
-      <h1>Faça seu Login</h1>
-    </form>
+    <main>
+      <div>
+        <h1>
+          Faça login <br />E entre para nosso time
+        </h1>
+      </div>
+      <div className="right-login">
+        <div className="card-login">
+          <h2>Login</h2>
+          <Input
+            label="Usuário"
+            type="text"
+            name="user"
+            placeholder="Usuário"
+          />
+          <Input
+            label="Senha"
+            type="password"
+            name="user"
+            placeholder="Senha"
+          />
+          <Button label="Login"/>
+        </div>
+      </div>
+    </main>
   );
 }
