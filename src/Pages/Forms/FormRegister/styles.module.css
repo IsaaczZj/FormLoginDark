@@ -52,7 +52,7 @@ main {
   & p {
     margin-top: 1.5rem;
     color: #f0ffffde;
-    & a{
+    & a {
       color: #00ff88;
     }
   }
