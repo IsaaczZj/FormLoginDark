@@ -2,50 +2,27 @@
   "users": [
     {
       "id": "1",
-      "username": "isaac",
+      "user": "isaac",
+      "email": "isaac@email.com",
       "password": "123"
     },
     {
-      "id": 1748227063318,
+      "id": 1748263567336,
       "email": "joseisaac.isaac123@gmail.com",
-      "user": "Isaac",
+      "user": "Carlos",
+      "password": "123123"
+    },
+    {
+      "id": 1748263640704,
+      "email": "luca.esposito123@hotmail.com",
+      "user": "asdasd",
+      "password": "asdasd"
+    },
+    {
+      "id": 1748264376318,
+      "email": "asdasd@gmail.com",
+      "user": "isaac_dev",
       "password": "123456"
-    },
-    {
-      "id": 1748227398752,
-      "email": "asdasd@gmail.com",
-      "user": "asdasd",
-      "password": "asdasd"
-    },
-    {
-      "id": 1748227468081,
-      "email": "asdasd@gmail.com",
-      "user": "isaac@email.com",
-      "password": "Unifor123!"
-    },
-    {
-      "id": 1748227534760,
-      "email": "asdasd@gmail.com",
-      "user": "isaac@email.com",
-      "password": "Unifor123!"
-    },
-    {
-      "id": 1748227548875,
-      "email": "asdasd@gmail.com",
-      "user": "isaac@email.com",
-      "password": "Unifor123!"
-    },
-    {
-      "id": 1748227557050,
-      "email": "asdasd@gmail.com",
-      "user": "isaac@email.com",
-      "password": "Unifor123!"
-    },
-    {
-      "id": 1748227572518,
-      "email": "asdasdas@email.com",
-      "user": "asdasd",
-      "password": "asdasd"
     }
   ]
 }

@@ -4,6 +4,6 @@ type ButtonProps = React.ComponentProps<"button"> & {
   label: string;
 };
 
-export default function Button({ label, ...props }: ButtonProps) {
-  return <button className={styles.btnLogin}>{label}</button>;
+export default function Button({ label,onClick, ...props }: ButtonProps) {
+  return <button onClick={onClick} className={styles.btnLogin}>{label}</button>;
 }

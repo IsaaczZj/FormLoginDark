@@ -12,3 +12,8 @@ export const userSchema = yup.object({
     .required("Digite uma senha")
     .min(6, "A senha deve ter no minimo 6 caracteres"),
 });
+
+export const userLoginSchema = yup.object({
+  user:yup.string().required('Digite seu usuário para logar'),
+  password:yup.string().required('Digite sua senha')
+})

@@ -1,0 +1,18 @@
+.userCard {
+  width: 50vw;
+  background-color: #f0ffffde;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  & h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #201b2c;;
+    margin-bottom: .5rem;
+  }
+  & p{
+    font-weight: 200;
+    font-size: 1.2rem;
+    text-align: left;
+    color: #201b2c;
+  }
+}

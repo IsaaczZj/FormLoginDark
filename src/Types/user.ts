@@ -4,3 +4,5 @@ export type UserRegister = {
   password: string;
 };
 
+export type UserLogin = Omit<UserRegister, "email">;
+export type User = Omit<UserRegister, "password">;

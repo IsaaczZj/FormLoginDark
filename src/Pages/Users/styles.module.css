@@ -1,0 +1,20 @@
+.user{
+  margin-top: 2rem;
+  padding: 1rem;
+}
+.userList{
+  height: 80vh;
+  border: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+.user > h1{
+  text-align: center;
+  color: #f0ffffde;
+  margin-bottom: 2rem;
+  flex-shrink: 0;
+}
