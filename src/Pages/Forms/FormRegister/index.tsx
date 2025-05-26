@@ -4,33 +4,46 @@ import Button from "../../../Components/Button";
 import styles from "./styles.module.css";
 import astronautaDecolando from "../../../assets/to-the-stars-animate.svg";
 import { NavLink } from "react-router";
-type User = {
-  id: number;
-  username: string;
-  password: string;
-};
+import { Controller, useForm } from "react-hook-form";
+import type { UserRegister } from "../../../Types/user";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { userSchema } from "../../../schemas/userSchema";
+import { toast, ToastContainer } from "react-toastify";
+
 export default function FormRegister() {
-  // const [user, setUser] = useState({
+  const {
+    control,
+    handleSubmit,
 
-  //   id: Math.random(),
-  //   username: "Carlos",
-  //   password: "123",
-  // });
-  // useEffect(() => {
-  //   async function createUser(user:User) {
-  //     const response = await fetch("http://localhost:3000/users", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(user),
-  //     });
-  //   }
-  //   createUser(user)
-  // }, []);
+    formState: { errors },
+  } = useForm<UserRegister>({
+    resolver: yupResolver(userSchema),
+  });
 
+  async function onSubmit(data: UserRegister) {
+    try {
+      const newUser: UserRegister = {
+        email: data.email,
+        user: data.user,
+        password: data.password,
+      };
+      const response = await fetch("http://localhost:3000/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ id: Date.now(), ...newUser }),
+      });
+      if (response.ok) {
+        toast.success("Usuário criado com sucesso");
+      }
+    } catch (error) {
+      toast.error("Erro ao criar o usuário");
+    }
+    console.log(data);
+  }
   return (
-    <main className={styles.main}>
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
       <div className={styles.leftLogin}>
         <h1>
           Cadastre-se <br />E entre para nosso time
@@ -40,24 +53,47 @@ export default function FormRegister() {
       <div className={styles.rightLogin}>
         <div className={styles.cardLogin}>
           <h2>Cadastre-se</h2>
-          <Input
-            label="Email"
-            type="text"
+          <Controller
             name="email"
-            placeholder="Digite seu email"
+            control={control}
+            render={({ field }) => (
+              <Input
+                label="Email"
+                type="email"
+                placeholder="Digite seu email"
+                {...field}
+              />
+            )}
           />
-          <Input
-            label="Usuário"
-            type="text"
+          {errors.email && <small>{errors.email.message}</small>}
+
+          <Controller
             name="user"
-            placeholder="Usuário"
+            control={control}
+            render={({ field }) => (
+              <Input
+                label="Usuário"
+                type="text"
+                placeholder="Usuário"
+                {...field}
+              />
+            )}
           />
-          <Input
-            label="Senha"
-            type="password"
-            name="user"
-            placeholder="Senha"
+          {errors.user && <small>{errors.user.message}</small>}
+
+          <Controller
+            name="password"
+            control={control}
+            render={({ field }) => (
+              <Input
+                label="Senha"
+                type="password"
+                placeholder="Senha"
+                {...field}
+              />
+            )}
           />
+          {errors.password && <small>{errors.password.message}</small>}
           <Button label="Login" />
           <p>
             Já tem uma conta?{" "}
@@ -67,6 +103,7 @@ export default function FormRegister() {
           </p>
         </div>
       </div>
-    </main>
+      <ToastContainer position="top-center" theme="colored" />
+    </form>
   );
 }

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import Input from "../../../Components/Input";
 import Button from "../../../Components/Button";
-import styles from './styles.module.css'
-import astronauta from '../../../assets/innovation-animate.svg'
+import styles from "./styles.module.css";
+import astronauta from "../../../assets/innovation-animate.svg";
 import { NavLink } from "react-router";
 type User = {
   id: number;
@@ -10,30 +10,12 @@ type User = {
   password: string;
 };
 export default function FormLogin() {
-  // const [user, setUser] = useState({
-
-  //   id: Math.random(),
-  //   username: "Carlos",
-  //   password: "123",
-  // });
-  // useEffect(() => {
-  //   async function createUser(user:User) {
-  //     const response = await fetch("http://localhost:3000/users", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(user),
-  //     });
-  //   }
-  //   createUser(user)
-  // }, []);
-
   return (
-    <main className={styles.main}>
+    <form className={styles.form}>
       <div className={styles.leftLogin}>
         <h1>
-          Faça login <br />Bem-vindo
+          Faça login <br />
+          Bem-vindo
         </h1>
         <img src={astronauta} alt="Austronauta animacao" />
       </div>
@@ -52,10 +34,15 @@ export default function FormLogin() {
             name="user"
             placeholder="Senha"
           />
-          <Button label="Login"/>
-          <p>Não tem uma conta? <strong><NavLink to='/register'>Cadastre-se</NavLink></strong></p>
+          <Button label="Login" />
+          <p>
+            Não tem uma conta?{" "}
+            <strong>
+              <NavLink to="/register">Cadastre-se</NavLink>
+            </strong>
+          </p>
         </div>
       </div>
-    </main>
+    </form>
   );
 }

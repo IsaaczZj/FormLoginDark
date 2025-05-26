@@ -1,4 +1,4 @@
-main {
+form {
   width: 100vw;
   height: 100vh;
   background-color: #201b2c;
@@ -59,7 +59,7 @@ main {
 }
 
 @media (max-width: 950px) {
-  main {
+  form {
     flex-direction: column;
     gap: 1rem;
   }

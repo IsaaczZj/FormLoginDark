@@ -8,7 +8,7 @@ export default function Input({ label, ...props }: InputProps) {
   return (
     <div className={styles.inputWrapper}>
       <label htmlFor={label}>{label}</label>
-      <input className={styles.input} {...props}/>
+      <input type='text' className={styles.input} {...props}/>
     </div>
   );
 }
