@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Input from "../../../Components/Input";
 import Button from "../../../Components/Button";
 import styles from './styles.module.css'
-
+import astronauta from '../../../assets/innovation-animate.svg'
 type User = {
   id: number;
   username: string;
@@ -34,6 +34,7 @@ export default function FormLogin() {
         <h1>
           Faça login <br />E entre para nosso time
         </h1>
+        <img src={astronauta} alt="Austronauta animacao" />
       </div>
       <div className={styles.rightLogin}>
         <div className={styles.cardLogin}>
