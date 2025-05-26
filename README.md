@@ -3,7 +3,7 @@
 
 # Sistema de Login e Cadastro - FormLoginDark
 
-Este projeto implementa/simula um sistema de autenticação de usuários com funcionalidades de login e cadastro, utilizando uma interface com tema escuro. Ele simula um backend com `json-server` para persistência de dados de usuários.
+Este projeto implementa/simula um sistema de usuários com funcionalidades de login e cadastro, utilizando uma interface com tema escuro. Ele simula um backend com `json-server` para persistência de dados de usuários.
 
 ## Funcionalidades
 
